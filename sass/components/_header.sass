@@ -1,0 +1,103 @@
+.header
+  margin-bottom: 36px
+  padding: 26px 0
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__logo
+    display: block
+    +trs(transform)
+    +hover
+      transform: scale(1.2)
+  &__right
+    display: flex
+    align-items: center
+    transition: 0.3s ease-in-out 0s
+    &.active
+      top: 10px
+  &__nav
+    margin-right: 50px
+    color: $black
+    font-weight: 600
+  &__button
+  &__burger
+    width: 24px
+    height: 24px
+    display: none
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    span
+      display: block
+      width: 22px
+      height: 2px
+      background-color: #3a4c66
+      border-radius: 4px
+      &:nth-child(2)
+        margin: 5px 0
+  &__close
+    display: none
+    position: absolute
+    top: 12px
+    right: 16px
+    cursor: pointer
+
+.nav
+  &__list
+    display: flex
+    align-items: center
+  &__item:not(:last-child)
+    margin-right: 40px
+  &__link
+    +trs(color)
+    +link-reset
+    +hover
+      color: lighten($black, 17%)
+
+// @media screen and ( max-width: 1200px )
+@media screen and ( max-width: 992px )
+  .nav
+    &__item:not(:last-child)
+      margin-right: 30px
+@media screen and ( max-width: 768px )
+  .header
+    position: relative
+    padding: 20px 0
+    margin-bottom: 30px
+    &__button
+      min-width: 150px
+    &__right
+      position: fixed
+      top: -100%
+      right: 10px
+      left: 10px
+      padding: 36px 24px
+      flex-direction: column
+      align-items: start
+      background-color: #fff
+      z-index: 99
+    &__nav
+      margin-right: 0
+      margin-bottom: 20px
+    &__close
+      display: block
+  .nav
+    &__list
+      align-items: start
+      flex-direction: column
+    &__item:not(:last-child)
+      margin-right: 0
+      margin-bottom: 20px
+
+  .header__burger
+    display: flex
+
+@media screen and ( max-width: 576px )
+  .header
+    margin-bottom: 24px
+    &__button
+      width: 100%
+// @media screen and ( max-width: 480px )
+// @media screen and ( min-width: 320px ) and ( max-width: 480px )

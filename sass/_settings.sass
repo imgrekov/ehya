@@ -1,0 +1,54 @@
+body
+  font-family: 'Open Sans', 'Roboto', 'Arial', sans-serif
+  font-size: 16px
+  background-color: #ffffff
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+a
+  color: $accent
+  +hover
+    color: darken($accent, 10%)
+
+.container
+  max-width: 1170px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+
+.page
+  // overflow: hidden
+
+.button
+  padding: 0.9em 1.4em
+  border: 2px solid transparent
+  border-radius: 8px
+  background-color: $black
+  font-weight: 700
+  font-size: 16px
+  line-height: 1
+  color: #ffffff
+  cursor: pointer
+  transition: 0.2s ease 0s
+  +hover
+    background-color: lighten($black, 7%)
+    border: 2px solid lighten($black, 7%)
+  &--o
+    background-color: transparent
+    color: $accent
+    border: 2px solid $accent
+    transition: 0.2s ease 0s
+    +hover
+      color: #ffffff
+      background-color: $accent
+      border: 2px solid transparent
+
+@media screen and ( max-width: 768px )
+  .container
+    max-width: 88%
+@media screen and ( max-width: 576px )
+  .container
+    max-width: 95%

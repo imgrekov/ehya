@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('../fonts/HKGrotesk-Regular.eot'), url('../fonts/HKGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HKGrotesk-Regular.ttf') format('truetype'), url('../fonts/HKGrotesk-Regular.woff') format('woff'),
+    url('../fonts/HKGrotesk-Regular.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HK Grotesk Mudium';
+  src: url('../fonts/HKGrotesk-Medium.eot'), url('../fonts/HKGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HKGrotesk-Medium.ttf') format('truetype'), url('../fonts/HKGrotesk-Medium.woff') format('woff'),
+    url('../fonts/HKGrotesk-Medium.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HK Grotesk Bold';
+  src: url('../fonts/HKGrotesk-Bold.eot'), url('../fonts/HKGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HKGrotesk-Bold.ttf') format('truetype'), url('../fonts/HKGrotesk-Bold.woff') format('woff'),
+    url('../fonts/HKGrotesk-Bold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
