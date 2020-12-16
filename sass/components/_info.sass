@@ -1,0 +1,132 @@
+.info
+  margin-bottom: 145px
+  &__wrapper
+    display: flex
+  &__images
+    margin-right: 57px
+    max-height: 490px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    flex: 0 0 670px
+  &__image
+    margin-bottom: 30px
+    width: 320px
+    height: 230px
+    border-radius: 8px
+    &:last-child
+      margin-bottom: 0
+    &:first-child
+      height: 490px
+      margin-right: 30px
+      margin-bottom: 0
+  &__text
+  &__title
+    margin-top: 12px
+    margin-bottom: 24px
+  &__desc
+    max-width: 390px
+    margin-bottom: 40px
+    font-size: 20px
+    line-height: 36px
+    color: $secondary
+
+  &-link
+    position: relative
+    display: inline-flex
+    align-items: center
+    cursor: pointer
+    transition: 0.2s ease 0s
+    &::after
+    &__text
+      margin-right: 19px
+      font-weight: 700
+      font-size: 18px
+      line-height: 25px
+    &__icon
+      width: 13px
+      height: 13px
+      fill: $accent
+  &:hover
+    .info-link__icon
+      fill: darken($accent, 10%)
+
+@media screen and ( max-width: 1200px )
+  .info
+    &__title
+      margin-top: 0
+      margin-bottom: 20px
+    &__desc
+      margin-bottom: 20px
+    &__images
+      margin-right: 50px
+      flex: 0 0 600px
+    &__image
+      width: 250px
+      &:first-child
+        width: 320px
+
+@media screen and ( max-width: 992px )
+  .info
+    &__wrapper
+      flex-wrap: wrap
+    &__images
+      margin-right: 0
+      margin-bottom: 50px
+      flex: 0 1 100%
+    &__image
+      width: auto
+      &:first-child
+        width: auto
+
+@media screen and ( max-width: 768px )
+  .info
+    &__title
+      margin-bottom: 25px
+    &__desc
+      max-width: 650px
+      margin-bottom: 23px
+    &__images
+      margin-bottom: 40px
+    &__image
+      width: 45%
+      margin-bottom: 4.5%
+      &:first-child
+        width: 50%
+        margin-right: 5%
+
+@media screen and ( max-width: 576px )
+  .info
+    &__wrapper
+    &__text
+      text-align: center
+      margin: 0 auto
+    &__title
+      margin: 0 auto
+      margin-bottom: 20px
+      max-width: 300px
+      font-size: 28px
+      line-height: 36px
+    &__desc
+      margin: 0 auto
+      max-width: 280px
+      font-size: 16px
+      line-height: 28px
+    &__images
+      margin-bottom: 33px
+      max-height: min-content
+      flex-direction: row
+    &__image
+      width: 48%
+      margin-bottom: 0
+      margin-right: 4%
+      max-height: 100px
+      &:last-child
+        margin-right: 0
+      &:first-child
+        width: 100%
+        margin-right: 0
+        margin-bottom: 14px
+        max-height: 300px
+    &-link
+      display: none
