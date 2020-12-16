@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ehya — a fashion shop</title>
+    <title>Ehya — магазин модной одежды</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./style/style.min.css" />
   </head>
@@ -65,8 +65,102 @@
       </header>
       <!-- /.header -->
       <main class="main">
-        <div class="container"></div>
-        <!-- /.container -->
+        <section class="hero">
+          <div class="container hero__container">
+            <div class="hero__wrapper">
+              <div class="hero__badges">
+                <div class="hero__badge"># READY TO BE COOL</div>
+                <!-- /.hero__badge -->
+              </div>
+              <!-- /.hero__badges -->
+              <h1 class="title hero__title">Каждый может быть крутым и&nbsp;модным</h1>
+              <!-- /.title hero__title -->
+              <p class="hero__desc">
+                Чтобы быть в тренде и&nbsp;стать модным, вам нужно носить отличную одежду и&nbsp;обновлять
+                свой&nbsp;стиль. Всё это вы&nbsp;можете найти здесь. Начните сейчас.
+              </p>
+              <!-- /.hero__desc -->
+              <button class="button hero__button">Подобрать одежду</button>
+              <!-- /.button hero__button -->
+              <div class="features hero__features">
+                <ul class="features__list">
+                  <li class="features__item">
+                    <div class="features__icon features__icon--1">
+                      <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.663 12.618c.522-1.135.04-2.07-1.29-2.65l-2.203-.91a2.097 2.097 0 00-2.13.317l-2.026 1.66-.059.59-.095 4.835v.84h2.452l5 1.42c.632.18 1.31.054 1.834-.34 3.295-2.477 5.497-4.15 5.83-4.46.808-.75 1.127-1.586.55-2.41-.465-.666-1.25-.737-2.223-.296l-4.732 2.406-1.331-.423c.172-.148.313-.34.423-.579z"
+                          fill="#1565D8"
+                        />
+                        <path
+                          opacity=".3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.21 3.86H15.2v-.21a.63.63 0 10-1.26 0v.21h-.198a1.47 1.47 0 00-1.47 1.472v.421a1.47 1.47 0 001.47 1.472h1.668a.21.21 0 01.21.21v.42a.21.21 0 01-.21.21h-1.928a.63.63 0 00-1.21.226l-.012.386a.63.63 0 00.63.65h1.05v.203a.63.63 0 101.26 0v-.204h.21a1.47 1.47 0 001.47-1.47v-.42a1.47 1.47 0 00-1.47-1.472h-1.668a.21.21 0 01-.21-.21v-.422a.21.21 0 01.21-.21h1.921a.63.63 0 001.178-.312V4.49a.63.63 0 00-.63-.63zM3.44 9.95h.21v7.98h-.21a.63.63 0 000 1.26h.84a.63.63 0 00.63-.63V9.32a.63.63 0 00-.63-.63h-.84a.63.63 0 100 1.26z"
+                          fill="#1565D8"
+                        />
+                      </svg>
+                    </div>
+                    <!-- /.features__icon -->
+                    <span class="features__text">Онлайн оплата</span>
+                    <!-- /.features__text -->
+                  </li>
+                  <!-- /.features__item -->
+                  <li class="features__item">
+                    <div class="features__icon features__icon--2">
+                      <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.703 4.935l-7.56-2.73a.42.42 0 00-.286 0l-7.56 2.73a.42.42 0 00-.277.395V11c0 4.452 2.66 7.407 7.871 8.806a.42.42 0 00.22-.001c5.21-1.436 7.869-4.39 7.869-8.805V5.33a.42.42 0 00-.277-.395zM8.1 10.265a.42.42 0 01.593.015l1.7 1.786 3.567-3.87a.42.42 0 01.618.569l-3.872 4.2a.42.42 0 01-.613.005l-2.008-2.111a.42.42 0 01.014-.594z"
+                          fill="#1565D8"
+                        />
+                      </svg>
+                    </div>
+                    <!-- /.features__icon -->
+                    <span class="features__text">Гарантия</span>
+                    <!-- /.features__text -->
+                  </li>
+                  <!-- /.features__item -->
+                  <li class="features__item">
+                    <div class="features__icon features__icon--3">
+                      <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.534 8.744c1.104-1.57 1.793-3.37 2.069-5.407a.505.505 0 01.352-.414c1.902-.588 2.982.346 2.964 2.478-.003.414-.022.782-.063 1.344-.09 1.257-.083 1.6.057 1.83.136.222.575.298 1.613.1.328-.061.656-.132 1.02-.216.16-.038 1.318-.32 1.614-.384.565-.122.97-.174 1.326-.152.964.06 1.476.68 1.565 1.87.155 2.096-.326 6.306-.806 7.856-.49 1.584-1.346 2.182-3.4 2.218-1.321.024-3.353.024-6.104 0-.702-.016-1.339-.152-1.905-.406.16-.33.248-.698.248-1.087V10.31c0-.592-.206-1.136-.55-1.566z"
+                          fill="#1565D8"
+                        />
+                        <path
+                          opacity=".3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.525 8.798C2.683 8.798 2 9.475 2 10.31v8.064c0 .835.683 1.512 1.525 1.512h1.017c.842 0 1.525-.677 1.525-1.512V10.31c0-.835-.683-1.512-1.525-1.512H3.525z"
+                          fill="#1565D8"
+                        />
+                      </svg>
+                    </div>
+                    <!-- /.features__icon -->
+                    <span class="features__text">Качество</span>
+                    <!-- /.features__text -->
+                  </li>
+                  <!-- /.features__item -->
+                </ul>
+                <!-- /.features__list -->
+              </div>
+              <!-- /.features hero__features -->
+              <div class="hero__bg">
+                <img class="hero__bg-image" src="./images/hero/bg.png" alt="" />
+                <!-- /.hero__bg-image -->
+              </div>
+              <!-- /.hero__bg -->
+            </div>
+            <!-- /.hero__wrapper -->
+          </div>
+          <!-- /.container -->
+        </section>
+        <!-- /.hero -->
       </main>
       <!-- /.main -->
       <footer class="footer">
