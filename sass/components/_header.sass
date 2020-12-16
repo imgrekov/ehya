@@ -51,6 +51,7 @@
   &__item:not(:last-child)
     margin-right: 40px
   &__link
+    display: inline-block
     +trs(color)
     +link-reset
     +hover
@@ -83,12 +84,17 @@
     &__close
       display: block
   .nav
+    width: 80%
     &__list
       align-items: start
       flex-direction: column
-    &__item:not(:last-child)
-      margin-right: 0
-      margin-bottom: 20px
+    &__item
+      width: 100%
+      &:not(:last-child)
+        margin-right: 0
+        margin-bottom: 20px
+    &__link
+      width: 100%
 
   .header__burger
     display: flex
