@@ -1,0 +1,162 @@
+.stories
+  margin-bottom: 140px
+  &__wrapper
+    display: flex
+    // align-items: center
+    justify-content: space-between
+  &-left
+    margin-top: -10px
+    &__badges
+      margin-bottom: 28px
+    &__badge
+      text-transform: uppercase
+    &__title
+      max-width: 330px
+      margin-bottom: 24px
+      +font-hk-b
+    &__text
+      max-width: 400px
+      max-height: 180px
+      margin-bottom: 50px
+      overflow-y: auto
+      font-size: 20px
+      line-height: 36px
+      color: $secondary
+    &__nav
+      display: flex
+      align-items: center
+  &-slider
+    max-width: 662px
+    margin-right: 0
+    margin-left: 0
+    &__nav
+      width: 56px
+      height: 56px
+      border-radius: 50%
+      border: 1px solid $black
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      +trs(border)
+      svg
+        width: 14px
+        height: 14px
+        fill: $black
+        +trs(fill)
+      +hover
+        border: 1px solid $accent
+        svg
+          fill: $accent
+      &--prev
+        margin-right: 22px
+      &--next
+    &__slide
+      margin-top: 0
+    &__wrapper
+    &__item
+      overflow: hidden
+    &__image
+      width: 312px
+      height: 317px
+      border-radius: 8px 8px 0 0
+    &__footer
+      transform: translate(15px, -23px)
+      background-color: #fafdff
+      padding: 20px
+      padding-right: 50px
+    &__text
+      max-height: 96px
+      max-width: 100%
+      margin-bottom: 20px
+      overflow-y: auto
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.2px
+      +font-hk-m
+    &__link
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+
+  .swiper-button-disabled
+    border: 1px solid #959EAD
+    cursor: default
+    svg
+      fill: #959EAD
+    +hover
+      border: 1px solid #959EAD
+      svg
+        fill: #959EAD
+
+@media screen and ( max-width: 992px )
+  .stories
+    &__wrapper
+      flex-wrap: wrap
+    &-slider
+      max-width: 100%
+      &__image
+        width: 450px
+    &-left
+      text-align: center
+      margin-bottom: 36px
+      width: 100%
+      &__badges
+        margin-bottom: 24px
+        justify-content: center
+      &__title
+        margin: 0 auto
+        margin-bottom: 16px
+        max-width: 85%
+      &__text
+        margin-bottom: 36px
+        max-width: 100%
+      &__nav
+        justify-content: center
+@media screen and ( max-width: 768px )
+  .stories
+    margin-bottom: 80px
+    &-slider
+      &__footer
+        padding-right: 10px
+@media screen and ( max-width: 576px )
+  .stories
+    margin-bottom: 64px
+    &__wrapper
+    &-slider
+      &__image
+    &-left
+      margin-bottom: 26px
+      &__badges
+      &__badge
+        padding: 2px 12px
+      &__title
+        margin-bottom: 16px
+        font-size: 28px
+        line-height: 36px
+        &--m-hidden
+          display: none
+      &__text
+        font-size: 16px
+        line-height: 28px
+    &-slider
+      &__wrapper
+        height: 830px
+        justify-content: space-between
+      &__nav
+        width: 48px
+        height: 48px
+      &__slide
+        height: 48%
+      &__image
+        height: 277px
+      &__footer
+        transform: translate(7px, -23px)
+      &__text
+        margin-bottom: 16px
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+      &__link
+        font-size: 16px
+        line-height: 22px

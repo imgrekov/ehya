@@ -90,17 +90,35 @@ a
       background-color: $accent
       border: 2px solid transparent
 
+.badges
+  display: flex
+  align-items: center
+.badge
+  margin-right: 12px
+  padding: 6px 16px
+  border-radius: 100px
+  font-weight: 600
+  font-size: 14px
+  line-height: 20px
+  color: #36b37e
+  background-color: rgba(#36b37e, 0.1)
+  &:last-child
+    margin-right: 0
+
 @media screen and ( max-width: 1200px )
   .container
     max-width: 990px
+@media screen and ( max-width: 992px )
+  .page__divider--reviews-stories
+    margin-bottom: 89px
 @media screen and ( max-width: 768px )
   .container
     max-width: 90%
-  .page__divider--reviews-stories
-    margin-bottom: 130px
 @media screen and ( max-width: 576px )
   .container
     max-width: 95%
   .page__divider--reviews-stories
     margin-top: 51px
-    margin-bottom: 48px
+    margin-bottom: 57px
+  .badges
+    justify-content: center
