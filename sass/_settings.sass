@@ -31,7 +31,7 @@ a
     color: darken($accent, 10%)
     &::after
       width: 100%
-  &.not-hover
+  &.no-hover
     &::after
       display: none
 
@@ -43,6 +43,12 @@ a
 
 .page
   // overflow: hidden
+
+.overflow
+  &--hidden
+    overflow: hidden
+  &--y-auto
+    overflow-y: auto
 
 .title
   font-weight: 700
