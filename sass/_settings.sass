@@ -43,6 +43,15 @@ a
 
 .page
   // overflow: hidden
+  &__divider
+    height: 1px
+    background-color: #e5eaf4
+    border: none
+    margin: 0
+    padding: 0
+    &--reviews-stories
+      margin-top: 67px
+      margin-bottom: 130px
 
 .overflow
   &--hidden
@@ -87,6 +96,11 @@ a
 @media screen and ( max-width: 768px )
   .container
     max-width: 90%
+  .page__divider--reviews-stories
+    margin-bottom: 130px
 @media screen and ( max-width: 576px )
   .container
     max-width: 95%
+  .page__divider--reviews-stories
+    margin-top: 51px
+    margin-bottom: 48px

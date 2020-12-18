@@ -1,0 +1,62 @@
+.reviews
+  &__container
+  &__wrapper
+    margin-bottom: 66px
+  &-slide
+    text-align: center
+    +font-hk
+    &__wrapper
+      max-width: 800px
+      width: 100%
+      margin: 0 auto
+    &__image
+      display: block
+      margin-bottom: 28px
+    &__text
+      margin-bottom: 28px
+      font-size: 20px
+      line-height: 42px
+    &__author
+      font-size: 20px
+      line-height: 24px
+      +font-hk-b
+    &__pagination
+
+.swiper
+  &-container
+  &-wrapper
+  &-slide
+  &-pagination
+    &-bullet
+      margin: 0 8px !important
+      width: 5px
+      height: 5px
+      background-color: $secondary-light
+      &-active
+        background-color: $black
+
+@media screen and ( max-width: 768px )
+  .reviews
+    &__wrapper
+      margin-bottom: 46px
+    &-slide
+      &__wrapper
+        max-width: 100%
+      &__image
+        margin-bottom: 34px
+@media screen and ( max-width: 576px )
+  .reviews
+    &__wrapper
+      margin-bottom: 42px
+    &-slide
+      &__image
+        margin-bottom: 17px
+      &__text
+        font-size: 18px
+        line-height: 36px
+        margin-bottom: 24px
+        &--m-hidden
+          display: none
+      &__author
+        font-size: 20px
+        line-height: 24px
