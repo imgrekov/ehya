@@ -16,10 +16,11 @@
       margin: 0 auto
       margin-bottom: 28px
       max-width: 620px
-      max-height: 210px
+      max-height: 330px
       overflow-y: auto
       font-size: 20px
       line-height: 42px
+      outline: none
     &__author
       font-size: 20px
       line-height: 24px
@@ -33,6 +34,7 @@
         width: 5px
         height: 5px
         background-color: $secondary-light
+        outline: none
         &-active
           background-color: $black
 
@@ -45,8 +47,9 @@
         max-width: 100%
       &__image
         margin-bottom: 34px
-      &__text--t-hidden
-        display: none
+      &__text
+        max-height: 210px
+
 @media screen and ( max-width: 576px )
   .reviews
     &__wrapper
@@ -55,12 +58,11 @@
       &__image
         margin-bottom: 17px
       &__text
+        max-height: 180px
         margin-bottom: 24px
         max-height: 360px
         font-size: 18px
         line-height: 36px
-        &--m-hidden
-          display: none
       &__author
         font-size: 20px
         line-height: 24px

@@ -23,13 +23,6 @@
       line-height: 36px
       color: $secondary
     &__nav
-      display: flex
-      align-items: center
-  &-slider
-    max-width: 662px
-    margin-right: 0
-    margin-left: 0
-    &__nav
       width: 56px
       height: 56px
       border-radius: 50%
@@ -38,6 +31,7 @@
       align-items: center
       justify-content: center
       cursor: pointer
+      outline: none
       +trs(border)
       svg
         width: 14px
@@ -51,6 +45,13 @@
       &--prev
         margin-right: 22px
       &--next
+      &-list
+        display: flex
+        align-items: center
+  &-slider
+    max-width: 662px
+    margin-right: 0
+    margin-left: 0
     &__slide
       margin-top: 0
     &__wrapper
@@ -112,7 +113,7 @@
         margin: 0 auto
         margin-bottom: 36px
         max-width: 550px
-      &__nav
+      &__nav-list
         justify-content: center
 @media screen and ( max-width: 768px )
   .stories
@@ -126,30 +127,24 @@
 @media screen and ( max-width: 576px )
   .stories
     margin-bottom: 73px
-    &__wrapper
-    &-slider
-      &__image
     &-left
       margin-bottom: 26px
-      &__badges
       &__badge
         padding: 2px 12px
       &__title
         margin-bottom: 16px
         font-size: 28px
         line-height: 36px
-        &--m-hidden
-          display: none
       &__text
         font-size: 16px
         line-height: 28px
+      &__nav
+        width: 48px
+        height: 48px
     &-slider
       &__wrapper
         height: 830px
         justify-content: space-between
-      &__nav
-        width: 48px
-        height: 48px
       &__slide
         height: 48%
       &__image

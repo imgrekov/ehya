@@ -12,7 +12,7 @@
       <header class="header">
         <div class="container">
           <div class="header__wrapper">
-            <a class="header__logo logo no-hover" href="#!" aria-label="Ehya logo">
+            <a class="header__logo logo no-hover" href="#" aria-label="Ehya logo">
               <img src="./images/logo.svg" alt="Ehya logo" />
             </a>
             <!-- /.header__logo -->
@@ -48,9 +48,9 @@
                 <!-- /.nav__list -->
               </nav>
               <!-- /.header__nav nav -->
-              <button class="button button--o header__button">Войти</button>
+              <button class="button button--o header__button" data-target="modal">Войти</button>
               <!-- /.button header__button -->
-              <img src="./images/header/header__close.svg" alt="Icon: menu close" class="header__close" />
+              <img src="./images/close.svg" alt="Icon close" class="header__close" />
               <!-- /.header__close -->
             </div>
             <!-- /.header__right -->
@@ -205,18 +205,20 @@
               <h2 class="title trends__title">Тренды</h2>
               <!-- /.title trends__title -->
               <nav class="trends__nav">
-                <button class="trends__button trends__button--active">Новинки</button>
+                <button class="trends__button trends__button--active" data-sort="all">Все</button>
                 <!-- /.trends__button -->
-                <button class="trends__button">Лучшее</button>
+                <button class="trends__button" data-sort="new">Новинки</button>
                 <!-- /.trends__button -->
-                <button class="trends__button">Скоро</button>
+                <button class="trends__button" data-sort="best">Лучшее</button>
+                <!-- /.trends__button -->
+                <button class="trends__button" data-sort="soon">Скоро</button>
                 <!-- /.trends__button -->
               </nav>
               <!-- /.trends__nav -->
             </div>
             <!-- /.trends__header -->
             <div class="trends__grid">
-              <div class="trends-card">
+              <div class="trends-card" data-sort-type="new">
                 <img
                   src="./images/trends/trends-card__image-1.jpg"
                   alt="First trend image"
@@ -241,7 +243,7 @@
                 <!-- /.trends-card__footer -->
               </div>
               <!-- /.trends-card -->
-              <div class="trends-card">
+              <div class="trends-card" data-sort-type="best">
                 <img
                   src="./images/trends/trends-card__image-2.jpg"
                   alt="Second trend image"
@@ -266,7 +268,7 @@
                 <!-- /.trends-card__footer -->
               </div>
               <!-- /.trends-card -->
-              <div class="trends-card">
+              <div class="trends-card" data-sort-type="new">
                 <img
                   src="./images/trends/trends-card__image-3.jpg"
                   alt="Third trend image"
@@ -291,7 +293,7 @@
                 <!-- /.trends-card__footer -->
               </div>
               <!-- /.trends-card -->
-              <div class="trends-card">
+              <div class="trends-card" data-sort-type="soon">
                 <img
                   src="./images/trends/trends-card__image-4.jpg"
                   alt="Fourth trend image"
@@ -316,7 +318,7 @@
                 <!-- /.trends-card__footer -->
               </div>
               <!-- /.trends-card -->
-              <div class="trends-card">
+              <div class="trends-card" data-sort-type="best">
                 <img
                   src="./images/trends/trends-card__image-5.jpg"
                   alt="Fifth trend image"
@@ -341,7 +343,7 @@
                 <!-- /.trends-card__footer -->
               </div>
               <!-- /.trends-card -->
-              <div class="trends-card">
+              <div class="trends-card" data-sort-type="soon">
                 <img
                   src="./images/trends/trends-card__image-6.jpg"
                   alt="Sixth trend image"
@@ -366,7 +368,7 @@
                 <!-- /.trends-card__footer -->
               </div>
               <!-- /.trends-card -->
-              <div class="trends-card">
+              <div class="trends-card" data-sort-type="soon">
                 <img
                   src="./images/trends/trends-card__image-7.jpg"
                   alt="Seventh trend image"
@@ -391,7 +393,7 @@
                 <!-- /.trends-card__footer -->
               </div>
               <!-- /.trends-card -->
-              <div class="trends-card trends-card--9">
+              <div class="trends-card trends-card--9" data-sort-type="best">
                 <img src="./images/trends/logo.jpg" alt="Eight trend image" class="trends-card__image" />
                 <div class="trends-card__footer">
                   <a href="#!" class="trends-card__link no-hover" aria-label="Custom style"></a>
@@ -448,10 +450,7 @@
                       Мне очень нравятся дизайн и&nbsp;стили, которые создает Ehya. Они такие разные и&nbsp;новаторские.
                       Я покупала несколько раз из&nbsp;коллекций, и&nbsp;что мне нравится, это&nbsp;то, что они
                       действительно неподвластны времени, а&nbsp;качество ткани просто превосходно.
-                      <span class="reviews-slide__text--m-hidden">
-                        Я&nbsp;с&nbsp;нетерпением жду новых коллекций
-                        <span class="reviews-slide__text--t-hidden">от&nbsp;сезона&nbsp;к&nbsp;сезону</span>
-                      </span>
+                      Я&nbsp;с&nbsp;нетерпением жду новых коллекций от&nbsp;сезона к&nbsp;сезону
                     </p>
                     <!-- /.reviews-slide__text -->
                     <h3 class="reviews-slide__author">Алисия Пума — клиент&nbsp;Fashun</h3>
@@ -469,10 +468,7 @@
                       Мне очень нравятся дизайн и&nbsp;стили, которые создает Ehya. Они такие разные и&nbsp;новаторские.
                       Я покупала несколько раз из&nbsp;коллекций, и&nbsp;что мне нравится, это&nbsp;то, что они
                       действительно неподвластны времени, а&nbsp;качество ткани просто превосходно.
-                      <span class="reviews-slide__text--m-hidden">
-                        Я&nbsp;с&nbsp;нетерпением жду новых коллекций
-                        <span class="reviews-slide__text--t-hidden">от&nbsp;сезона&nbsp;к&nbsp;сезону</span>
-                      </span>
+                      Я&nbsp;с&nbsp;нетерпением жду новых коллекций от&nbsp;сезона к&nbsp;сезону
                     </p>
                     <!-- /.reviews-slide__text -->
                     <h3 class="reviews-slide__author">Алисия Пума — клиент&nbsp;Fashun</h3>
@@ -490,10 +486,7 @@
                       Мне очень нравятся дизайн и&nbsp;стили, которые создает Ehya. Они такие разные и&nbsp;новаторские.
                       Я покупала несколько раз из&nbsp;коллекций, и&nbsp;что мне нравится, это&nbsp;то, что они
                       действительно неподвластны времени, а&nbsp;качество ткани просто превосходно.
-                      <span class="reviews-slide__text--m-hidden">
-                        Я&nbsp;с&nbsp;нетерпением жду новых коллекций
-                        <span class="reviews-slide__text--t-hidden">от&nbsp;сезона&nbsp;к&nbsp;сезону</span>
-                      </span>
+                      Я&nbsp;с&nbsp;нетерпением жду новых коллекций от&nbsp;сезона к&nbsp;сезону
                     </p>
                     <!-- /.reviews-slide__text -->
                     <h3 class="reviews-slide__author">Алисия Пума — клиент&nbsp;Fashun</h3>
@@ -524,34 +517,31 @@
                   <!-- /.stories-left__badge -->
                 </div>
                 <!-- /.stories-left__badges -->
-                <h2 class="stories-left__title title">
-                  <span class="stories-left__title--m-hidden">Это</span>
-                  История Fashun
-                </h2>
+                <h2 class="stories-left__title title">Это История Fashun</h2>
                 <!-- /.stories-left__title -->
                 <p class="stories-left__text">
                   Ознакомьтесь с&nbsp;нашим рассказом о&nbsp;моде. Написано нашим дизайнером и&nbsp;специалистом.
                 </p>
                 <!-- /.stories-left__text -->
-                <div class="stories-left__nav">
-                  <div class="stories-slider__nav stories-slider__nav--prev">
+                <div class="stories-left__nav-list">
+                  <div class="stories-left__nav stories-left__nav--prev">
                     <svg xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M8.317 12.938c.312-.313.281-.782 0-1.094L4.536 8.25h9a.74.74 0 00.75-.75v-1a.76.76 0 00-.75-.75h-9l3.78-3.563c.282-.312.313-.78 0-1.093L7.63.406a.774.774 0 00-1.062 0L.504 6.5a.684.684 0 000 1.031l6.063 6.094c.281.281.75.281 1.062 0l.688-.688z"
                       />
                     </svg>
                   </div>
-                  <!-- /.stories-slider__nav -->
-                  <div class="stories-slider__nav stories-slider__nav--next">
+                  <!-- /.stories-left__nav -->
+                  <div class="stories-left__nav stories-left__nav--next">
                     <svg xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M5.938 1.094c-.313.312-.282.781 0 1.093l3.78 3.563H.75A.74.74 0 000 6.5v1c0 .438.313.75.75.75h8.969l-3.781 3.594a.814.814 0 000 1.094l.687.687c.313.281.781.281 1.063 0l6.093-6.094c.281-.281.281-.75 0-1.062L7.687.406c-.28-.281-.75-.281-1.062 0l-.688.688z"
                       />
                     </svg>
                   </div>
-                  <!-- /.stories-slider__nav -->
+                  <!-- /.stories-left__nav -->
                 </div>
-                <!-- /.stories-left__nav -->
+                <!-- /.stories-left__nav-list -->
               </div>
               <!-- /.stories-left -->
               <div class="swiper-container stories-slider">
@@ -670,7 +660,7 @@
         <div class="container footer__container">
           <div class="footer__wrapper">
             <div class="footer-info">
-              <a class="footer-info__logo logo no-hover" href="#!" aria-label="Ehya logo">
+              <a class="footer-info__logo logo no-hover" href="#" aria-label="Ehya logo">
                 <img src="./images/logo.svg" alt="Ehya logo" />
               </a>
               <!-- /.header__logo -->
@@ -678,7 +668,7 @@
               <!-- /.footer-info__title -->
               <ul class="socials footer-info__socials">
                 <li class="socials__item">
-                  <a href="#!" class="socials__link no-hover">
+                  <a href="https://www.google.com" target="_blank" class="socials__link no-hover">
                     <svg width="16" height="17" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15.958 8.925c0-.5-.062-.875-.125-1.281H8.458V10.3h4.375c-.156 1.156-1.312 3.344-4.375 3.344-2.656 0-4.812-2.188-4.812-4.906 0-4.344 5.125-6.344 7.875-3.688l2.125-2.031A7.517 7.517 0 008.458.988a7.729 7.729 0 00-7.75 7.75 7.709 7.709 0 007.75 7.75c4.469 0 7.5-3.125 7.5-7.563z"
@@ -689,7 +679,7 @@
                 </li>
                 <!-- /.socials__item -->
                 <li class="socials__item">
-                  <a href="#!" class="socials__link no-hover">
+                  <a href="https://twitter.com/" target="_blank" class="socials__link no-hover">
                     <svg width="17" height="14" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M14.677 3.488A6.95 6.95 0 0016.302 1.8a6.15 6.15 0 01-1.875.5A3.206 3.206 0 0015.865.488a6.93 6.93 0 01-2.063.812A3.281 3.281 0 0011.396.269 3.28 3.28 0 008.114 3.55c0 .25.032.5.094.75A9.52 9.52 0 011.427.863 3.192 3.192 0 00.99 2.519c0 1.125.562 2.125 1.468 2.719-.531-.032-1.062-.157-1.5-.407v.032A3.285 3.285 0 003.583 8.08c-.25.063-.562.125-.844.125-.218 0-.406-.03-.624-.062a3.265 3.265 0 003.062 2.281 6.597 6.597 0 01-4.063 1.406c-.28 0-.53-.031-.78-.062 1.437.937 3.155 1.469 5.03 1.469 6.032 0 9.313-4.97 9.313-9.313v-.437z"
@@ -700,7 +690,7 @@
                 </li>
                 <!-- /.socials__item -->
                 <li class="socials__item">
-                  <a href="#!" class="socials__link no-hover">
+                  <a href="https://www.instagram.com/" target="_blank" class="socials__link no-hover">
                     <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M7.333 4.144c-2 0-3.594 1.625-3.594 3.594 0 2 1.594 3.593 3.594 3.593a3.594 3.594 0 003.594-3.593c0-1.97-1.625-3.594-3.594-3.594zm0 5.937A2.34 2.34 0 014.99 7.738c0-1.282 1.032-2.313 2.344-2.313a2.307 2.307 0 012.313 2.313c0 1.312-1.032 2.343-2.313 2.343zm4.563-6.062a.84.84 0 00-.844-.844.84.84 0 00-.844.844.84.84 0 00.844.844.84.84 0 00.844-.844zm2.375.844c-.063-1.125-.313-2.125-1.125-2.938C12.333 1.113 11.333.863 10.208.8 9.052.738 5.583.738 4.427.8c-1.125.063-2.094.313-2.937 1.125C.677 2.738.427 3.738.365 4.863c-.063 1.156-.063 4.625 0 5.78.062 1.126.312 2.095 1.125 2.938.843.813 1.812 1.063 2.937 1.125 1.156.063 4.625.063 5.781 0 1.125-.062 2.125-.312 2.938-1.125.812-.843 1.062-1.812 1.125-2.937.062-1.156.062-4.625 0-5.781zm-1.5 7c-.219.625-.719 1.093-1.313 1.343-.937.375-3.125.282-4.125.282-1.031 0-3.219.093-4.125-.282a2.37 2.37 0 01-1.344-1.343c-.375-.907-.28-3.094-.28-4.125 0-1-.095-3.188.28-4.125A2.41 2.41 0 013.208 2.3c.906-.375 3.094-.281 4.125-.281 1 0 3.188-.094 4.125.281.594.219 1.063.719 1.313 1.313.375.937.281 3.125.281 4.125 0 1.03.094 3.218-.281 4.125z"
@@ -711,7 +701,7 @@
                 </li>
                 <!-- /.socials__item -->
                 <li class="socials__item">
-                  <a href="#!" class="socials__link no-hover">
+                  <a href="https://ru.linkedin.com/" target="_blank" class="socials__link no-hover">
                     <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M13.333.738H1.302c-.531 0-.969.468-.969 1.03v11.97c0 .562.438 1 .969 1h12.031c.531 0 1-.438 1-1V1.768c0-.562-.469-1.03-1-1.03zm-8.781 12H2.49V6.08h2.062v6.657zM3.521 5.144c-.688 0-1.219-.531-1.219-1.188a1.22 1.22 0 011.219-1.218c.656 0 1.187.562 1.187 1.218 0 .657-.531 1.188-1.187 1.188zm8.812 7.594H10.24v-3.25c0-.75 0-1.75-1.062-1.75-1.094 0-1.25.843-1.25 1.718v3.282H5.864V6.08h1.97v.907h.03c.282-.532.97-1.094 1.97-1.094 2.093 0 2.5 1.406 2.5 3.187v3.657z"
@@ -846,6 +836,66 @@
         <!-- /.container -->
       </footer>
       <!-- /.footer -->
+      <div class="modal">
+        <div class="modal__wrapper">
+          <button class="modal__close">
+            <img src="./images/close.svg" alt="Icon close" />
+          </button>
+          <!-- /.modal__close -->
+          <h2 class="modal__title title">Войдите в&nbsp;личный&nbsp;кабинет</h2>
+          <!-- /.modal__title -->
+          <form action="#" method="POST" class="modal-form">
+            <div class="modal-form__group">
+              <div class="modal-form__icon">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.5 22.5h15v-3.75a5.256 5.256 0 00-5.25-5.25h-4.5a5.256 5.256 0 00-5.25 5.25v3.75zM6.75 6.75a5.25 5.25 0 1010.5 0 5.25 5.25 0 00-10.5 0z"
+                  />
+                </svg>
+              </div>
+              <!-- /.modal-form__icon -->
+              <input type="text" class="modal-form__input" placeholder="Логин" required />
+            </div>
+            <!-- /.modal-form__group -->
+            <div class="modal-form__group">
+              <div class="modal-form__icon">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18 8h2a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h2V7a6 6 0 1112 0v1zm-2 0V7a4 4 0 10-8 0v1h8zm-5 6v2h2v-2h-2zm-4 0v2h2v-2H7zm8 0v2h2v-2h-2z"
+                  />
+                </svg>
+              </div>
+              <!-- /.modal-form__icon -->
+              <input type="password" class="modal-form__input modal-form__input--pw" placeholder="Пароль" required />
+              <div class="modal-form__icon-pw">
+                <svg class="modal-form__icon-eye modal-form__icon-eye--open" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.281 12a2.625 2.625 0 105.25 0 2.625 2.625 0 00-5.25 0zm12.802-.605C19.86 6.715 16.503 4.36 12 4.36c-4.505 0-7.86 2.356-10.083 7.039a1.413 1.413 0 000 1.207C4.14 17.285 7.497 19.64 12 19.64c4.505 0 7.861-2.356 10.083-7.039.18-.38.18-.82 0-1.207zm-10.177 4.73a4.125 4.125 0 110-8.25 4.125 4.125 0 010 8.25z"
+                  />
+                </svg>
+                <!-- /.modal-form__icon-eye -->
+                <svg class="modal-form__icon-eye modal-form__icon-eye--close" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.906 14.625a2.625 2.625 0 002.615-2.854l-2.843 2.844c.075.006.151.01.228.01zm8.69-10.745l-1.002-1a.188.188 0 00-.265 0l-2.562 2.563C15.353 4.72 13.764 4.359 12 4.359c-4.505 0-7.865 2.346-10.083 7.039a1.413 1.413 0 000 1.207c.886 1.866 1.953 3.361 3.2 4.487L2.639 19.57a.188.188 0 000 .265l1 1a.188.188 0 00.266 0l16.691-16.69a.186.186 0 00.04-.204.186.186 0 00-.04-.06zM7.78 12a4.125 4.125 0 016.068-3.64l-1.14 1.14a2.627 2.627 0 00-3.302 3.303l-1.14 1.14A4.103 4.103 0 017.781 12z"
+                  />
+                  <path
+                    d="M22.083 11.395c-.825-1.737-1.807-3.154-2.946-4.25l-3.378 3.378a4.127 4.127 0 01-5.33 5.33l-2.865 2.865c1.33.615 2.808.922 4.436.922 4.505 0 7.866-2.346 10.083-7.038a1.414 1.414 0 000-1.207z"
+                  />
+                </svg>
+              </div>
+              <!-- /.modal-form__icon-pw -->
+            </div>
+            <!-- /.modal-form__group -->
+            <button type="submit" class="button modal-form__button">Войти</button>
+            <!-- /.button modal-form__button -->
+          </form>
+          <!-- /.modal-form -->
+        </div>
+        <!-- /.modal__wrapper -->
+        <div class="modal-overlay"></div>
+        <!-- /.modal-overlay -->
+      </div>
+      <!-- /.modal -->
     </div>
     <!-- /.page -->
     <script src="./js/swiper-bundle.min.js"></script>
