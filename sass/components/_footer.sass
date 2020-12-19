@@ -1,0 +1,127 @@
+.footer
+  padding: 128px 0
+  &__wrapper
+    display: flex
+    align-items: flex-start
+  &-info
+    margin-right: 27px
+    &__logo
+      margin-bottom: 25px
+    &__title
+      margin-bottom: 30px
+      max-width: 265px
+      font-weight: 400
+      font-size: 16px
+      line-height: 28px
+      color: $secondary
+    &__socials
+  &-nav
+    display: flex
+    &__block
+      margin-right: 48px
+      max-width: 150px
+      &:last-child
+        margin-right: 0
+    &__title
+      margin-bottom: 30px
+      font-weight: 700
+      font-size: 18px
+      line-height: 25px
+    &__list
+    &__item:not(:last-child)
+      margin-bottom: 25px
+      font-size: 16px
+      line-height: 22px
+    &__link
+      +link-reset
+      +hover
+        color: inherit
+
+.socials
+  display: flex
+  align-items: center
+  &__item:not(:last-child)
+    margin-right: 6px
+  &__link
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 42px
+    height: 42px
+    background-color: rgba($secondary, 0.1)
+    border-radius: 50%
+    +trs(background-color)
+    svg
+      fill: $secondary
+      +trs(fill)
+    +hover
+      background-color: #1818181a
+      svg
+        fill: $accent
+
+@media screen and ( max-width: 1200px )
+  .footer__block:not(:last-child)
+    margin-right: 32px
+@media screen and ( max-width: 992px )
+  .footer
+    padding: 90px 0
+    &__container
+      max-width: 690px
+    &-nav
+      flex-wrap: wrap
+      justify-content: space-between
+      &__block
+        margin-right: 0 !important
+        margin-bottom: 48px
+        max-width: 47%
+        flex-basis: 48%
+        &:nth-last-child(-n+2)
+          margin-bottom: 0
+@media screen and ( max-width: 768px )
+  .footer
+    padding: 64px 0
+    &-info
+      margin-right: 50px
+      &__title
+        max-width: 360px
+@media screen and ( max-width: 576px )
+  .footer
+    padding: 48px 0
+    &__container
+      max-width: 88%
+    &__wrapper
+      flex-wrap: wrap
+    &-info
+      margin: 0 auto
+      order: 2
+      text-align: center
+      &__socials
+        justify-content: center
+      &__logo
+        margin-bottom: 11px
+        margin-left: 10px
+      &__title
+        margin-bottom: 21px
+        font-size: 14px
+        line-height: 24px
+      &__socials
+        margin-left: 10px
+    &-nav
+      margin-bottom: 67px
+      &__block
+        max-width: 100%
+        flex-basis: 100%
+        margin-bottom: 33px
+        &:nth-last-child(-n+2)
+          margin-bottom: 33px
+        &:last-child
+          margin-bottom: 0
+      &__title
+        margin-bottom: 17px
+        font-size: 16px
+        line-height: 22px
+      &__item:not(:last-child)
+        margin-bottom: 13px
+      &__link
+        font-size: 14px
+        line-height: 20px

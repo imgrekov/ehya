@@ -109,8 +109,9 @@
         margin-bottom: 16px
         max-width: 85%
       &__text
+        margin: 0 auto
         margin-bottom: 36px
-        max-width: 100%
+        max-width: 550px
       &__nav
         justify-content: center
 @media screen and ( max-width: 768px )
@@ -119,6 +120,9 @@
     &-slider
       &__footer
         padding-right: 10px
+@media screen and (min-width: 575px)
+  .stories-slider__slide
+    margin-top: 0 !important
 @media screen and ( max-width: 576px )
   .stories
     margin-bottom: 73px

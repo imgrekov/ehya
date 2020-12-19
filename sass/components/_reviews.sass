@@ -13,11 +13,13 @@
       display: block
       margin-bottom: 28px
     &__text
+      margin: 0 auto
       margin-bottom: 28px
+      max-width: 620px
+      max-height: 210px
+      overflow-y: auto
       font-size: 20px
       line-height: 42px
-      max-height: 170px
-      overflow-y: auto
     &__author
       font-size: 20px
       line-height: 24px
@@ -43,6 +45,8 @@
         max-width: 100%
       &__image
         margin-bottom: 34px
+      &__text--t-hidden
+        display: none
 @media screen and ( max-width: 576px )
   .reviews
     &__wrapper
@@ -51,9 +55,10 @@
       &__image
         margin-bottom: 17px
       &__text
+        margin-bottom: 24px
+        max-height: 360px
         font-size: 18px
         line-height: 36px
-        margin-bottom: 24px
         &--m-hidden
           display: none
       &__author
