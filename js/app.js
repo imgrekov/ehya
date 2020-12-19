@@ -1,8 +1,9 @@
 const headerBurger = document.querySelector('.header__burger')
-const nav = document.querySelector('.header__right')
 const headerClose = document.querySelector('.header__close')
+const nav = document.querySelector('.header__right')
 const body = document.querySelector('body')
 
+// Навигация
 headerBurger.addEventListener('click', () => {
   nav.classList.add('header__right--active')
   body.classList.add('overflow--hidden')
@@ -12,6 +13,7 @@ headerClose.addEventListener('click', () => {
   body.classList.remove('overflow--hidden')
 })
 
+// Слайдер с отзывами
 const reviewsSlider = new Swiper('.reviews__container', {
   loop: true,
   spaceBetween: 20,
@@ -33,6 +35,7 @@ const reviewsContainer = document.querySelector('.reviews__container')
 reviewsContainer.addEventListener('mouseover', () => reviewsSlider.autoplay.stop())
 reviewsContainer.addEventListener('mouseout', () => reviewsSlider.autoplay.start())
 
+// Слайдер с историями
 const storiesSlider = new Swiper('.stories-slider', {
   spaceBetween: 24,
   slidesPerView: 1,
@@ -52,6 +55,7 @@ const storiesSlider = new Swiper('.stories-slider', {
   },
 })
 
+// Всё, что связано с модалкой
 const modalButtons = document.querySelectorAll('[data-target=modal]')
 modalButtons.forEach(target => {
   target.addEventListener('click', modalOpen)
@@ -67,16 +71,16 @@ document.addEventListener('keyup', e => {
 function modalOpen() {
   document.querySelector('.modal-overlay').classList.add('modal-overlay--active')
   document.querySelector('.modal__wrapper').classList.add('modal__wrapper--active')
-  document.querySelector('body').classList.add('overflow--hidden')
+  body.classList.add('overflow--hidden')
 }
 function modalClose() {
   document.querySelector('.modal-overlay').classList.remove('modal-overlay--active')
   document.querySelector('.modal__wrapper').classList.remove('modal__wrapper--active')
-  if (!document.querySelector('.header__right').classList.contains('header__right--active')) {
-    document.querySelector('body').classList.remove('overflow--hidden')
-  }
+  if (!document.querySelector('.header__right').classList.contains('header__right--active'))
+    body.classList.remove('overflow--hidden')
 }
 
+// Пароль в инпуте в модалке
 const iconPw = document.querySelector('.modal-form__icon-pw')
 const pwInput = document.querySelector('.modal-form__input--pw')
 iconPw.addEventListener('click', () => {
@@ -88,6 +92,7 @@ iconPw.addEventListener('click', () => {
   iconPw.classList.toggle('modal-form__icon-pw--visible')
 })
 
+// Соритровка трендов по категориям
 const trendsButtons = document.querySelectorAll('.trends__button')
 const trendsCards = document.querySelectorAll('.trends-card')
 
