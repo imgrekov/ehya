@@ -153,7 +153,7 @@
               </div>
               <!-- /.features hero__features -->
               <div class="hero__bg">
-                <img class="hero__bg-image" src="./images/hero/bg.png" alt="" />
+                <img class="hero__bg-image" src="./images/hero/bg.png" alt="Hero background" />
                 <!-- /.hero__bg-image -->
               </div>
               <!-- /.hero__bg -->
@@ -167,9 +167,21 @@
           <div class="container">
             <div class="info__wrapper">
               <div class="info__images">
-                <img src="./images/info/image-1.png" alt="First info picture" class="info__image" />
-                <img src="./images/info/image-2.png" alt="Second info picture" class="info__image" />
-                <img src="./images/info/image-3.png" alt="Third info picture" class="info__image" />
+                <picture class="info__image">
+                  <source srcset="./images/info/image-1.webp" type="image/webp" />
+                  <img src="./images/info/image-1.png" alt="First info picture" />
+                </picture>
+                <!-- /.info__image -->
+                <picture class="info__image">
+                  <source srcset="./images/info/image-2.webp" type="image/webp" />
+                  <img src="./images/info/image-2.png" alt="Second info picture" />
+                </picture>
+                <!-- /.info__image -->
+                <picture class="info__image">
+                  <source srcset="./images/info/image-3.webp" type="image/webp" />
+                  <img src="./images/info/image-3.png" alt="Third info picture" />
+                </picture>
+                <!-- /.info__image -->
               </div>
               <!-- /.info__images -->
               <div class="info__text">
@@ -224,6 +236,7 @@
                   alt="First trend image"
                   class="trends-card__image"
                 />
+                <!-- /.trends-card__image -->
                 <div class="trends-card__footer">
                   <a href="#!" class="trends-card__link no-hover" aria-label="Minimalist Style"></a>
                   <!-- /.trends-card__link -->
@@ -548,11 +561,11 @@
                 <div class="swiper-wrapper stories-slider__wrapper">
                   <div class="swiper-slide stories-slider__slide">
                     <div class="stories-slider__item">
-                      <img
-                        src="./images/stories/stories-slider__image-1.png"
-                        alt="First story image"
-                        class="stories-slider__image"
-                      />
+                      <picture class="stories-slider__image">
+                        <source srcset="./images/stories/stories-slider__image-1.webp" type="image/webp" />
+                        <img src="./images/stories/stories-slider__image-1.png" alt="First stories image" />
+                      </picture>
+                      <!-- /.stories-slider__image -->
                       <div class="stories-slider__footer">
                         <p class="stories-slider__text">Mix & Match Style 01: повседневный и формальный стиль</p>
                         <!-- /.stories-slider__text -->
@@ -565,11 +578,11 @@
                   <!-- /.stories-slider__slide -->
                   <div class="swiper-slide stories-slider__slide">
                     <div class="stories-slider__item">
-                      <img
-                        src="./images/stories/stories-slider__image-2.png"
-                        alt="First story image"
-                        class="stories-slider__image"
-                      />
+                      <picture class="stories-slider__image">
+                        <source srcset="./images/stories/stories-slider__image-2.webp" type="image/webp" />
+                        <img src="./images/stories/stories-slider__image-2.png" alt="Second stories image" />
+                      </picture>
+                      <!-- /.stories-slider__image -->
                       <div class="stories-slider__footer">
                         <p class="stories-slider__text">Лайфхак: Купите одежду Thrifft на воскресном рынке</p>
                         <!-- /.stories-slider__text -->
