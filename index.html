@@ -844,7 +844,7 @@
           <!-- /.modal__close -->
           <h2 class="modal__title title">Войдите в&nbsp;личный&nbsp;кабинет</h2>
           <!-- /.modal__title -->
-          <form action="#" method="POST" class="modal-form">
+          <form action="./send.php" method="POST" class="modal-form">
             <div class="modal-form__group">
               <div class="modal-form__icon">
                 <svg xmlns="http://www.w3.org/2000/svg">
@@ -854,7 +854,7 @@
                 </svg>
               </div>
               <!-- /.modal-form__icon -->
-              <input type="text" class="modal-form__input" placeholder="Логин" required />
+              <input type="text" name="login" class="modal-form__input" placeholder="Логин" required minlength="2" />
             </div>
             <!-- /.modal-form__group -->
             <div class="modal-form__group">
@@ -866,7 +866,14 @@
                 </svg>
               </div>
               <!-- /.modal-form__icon -->
-              <input type="password" class="modal-form__input modal-form__input--pw" placeholder="Пароль" required />
+              <input
+                type="password"
+                name="password"
+                class="modal-form__input modal-form__input--pw"
+                placeholder="Пароль"
+                required
+                minlength="6"
+              />
               <div class="modal-form__icon-pw">
                 <svg class="modal-form__icon-eye modal-form__icon-eye--open" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -899,6 +906,7 @@
     </div>
     <!-- /.page -->
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/bouncer.polyfills.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>

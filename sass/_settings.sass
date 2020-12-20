@@ -91,6 +91,13 @@ a
       color: #ffffff
       background-color: $accent
       border: 2px solid transparent
+  &--link
+    display: inline-block
+    text-align: center
+    +hover
+      color: #ffffff
+  &--wide
+    min-width: 260px
 
 .logo
   display: inline-block
@@ -113,6 +120,15 @@ a
   &:last-child
     margin-right: 0
 
+.form
+  &-error
+    border: 1px solid tomato !important
+    color: red !important
+    &-message
+      margin-top: 5px !important
+      color: tomato !important
+      font-size: 14px !important
+
 @media screen and ( max-width: 1200px )
   .container
     max-width: 990px
@@ -133,3 +149,6 @@ a
   .title
     font-size: 28px
     line-height: 36px
+  .button
+    &--wide
+      min-width: 100%
