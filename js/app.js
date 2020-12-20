@@ -2,15 +2,39 @@ const headerBurger = document.querySelector('.header__burger')
 const headerClose = document.querySelector('.header__close')
 const nav = document.querySelector('.header__right')
 const body = document.querySelector('body')
-
-// Навигация
-headerBurger.addEventListener('click', () => {
+const navLinks = document.querySelectorAll('.nav__link')
+const menuOpen = () => {
   nav.classList.add('header__right--active')
   body.classList.add('overflow--hidden')
-})
-headerClose.addEventListener('click', () => {
+}
+const menuClose = () => {
   nav.classList.remove('header__right--active')
   body.classList.remove('overflow--hidden')
+}
+
+// Навигация
+navLinks.forEach(link => link.addEventListener('click', menuClose))
+headerBurger.addEventListener('click', menuOpen)
+headerClose.addEventListener('click', menuClose)
+
+// Кнопка для скрола вверх
+const scrollUpButton = document.querySelector('.scroll-up')
+const offset = 300
+const getTop = () => window.pageYOffset || document.documentElement.scrollTop
+
+window.addEventListener('scroll', () => {
+  if (getTop() > offset) {
+    scrollUpButton.classList.add('scroll-up--active')
+  } else {
+    scrollUpButton.classList.remove('scroll-up--active')
+  }
+})
+
+scrollUpButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
 })
 
 // Слайдер с отзывами
@@ -99,9 +123,27 @@ iconPw.addEventListener('click', () => {
 // Соритровка трендов по категориям
 if (document.querySelector('.trends-card') && document.querySelector('.trends__button')) {
   const trendsButtons = document.querySelectorAll('.trends__button')
+  const trendsButtonActive = document.querySelector('.trends__button--active')
   const trendsCards = document.querySelectorAll('.trends-card')
+
+  if (trendsButtonActive) {
+    const virginSort = (activeButton, cards) => {
+      cards.forEach(card => {
+        const isSorted = card.dataset.sortType === activeButton.dataset.sort
+        const isEmptyCard = card.classList.contains('trends-card--empty')
+        if (!isSorted && !isEmptyCard) {
+          card.classList.add('trends-card--sorted')
+        } else {
+          card.classList.remove('trends-card--sorted')
+        }
+      })
+    }
+
+    virginSort(trendsButtonActive, trendsCards)
+  }
+
   const trendsCardsSort = (category, cards) => {
-    trendsCards.forEach(card => {
+    cards.forEach(card => {
       const isSorted = card.dataset.sortType === category
       const isEmptyCard = card.classList.contains('trends-card--empty')
       if (!isSorted && !isEmptyCard) {
@@ -119,6 +161,13 @@ if (document.querySelector('.trends-card') && document.querySelector('.trends__b
       trendsCardsSort(button.dataset.sort, trendsCards)
     })
   })
+
+  // trendsCards.forEach(card => {
+  //   trendsButtons.forEach(button => {
+  //     button.dataset.sort
+  //   })
+  //   virginSort()
+  // })
 }
 
 // Валидация форм
