@@ -56,8 +56,7 @@
     &:nth-last-child(-n+4)
       margin-bottom: 0
     &--sorted
-      opacity: 0.2
-      pointer-events: none
+      display: none
     &--9
       display: none
     &__image
@@ -158,7 +157,8 @@
         display: none
       &__image
         height: 420px
-
+      &__empty
+        height: 420px
 @media screen and ( max-width: 768px )
   .trends
     margin-bottom: 92px
@@ -181,6 +181,7 @@
       &:nth-last-child(-n+3)
         margin-bottom: 0
       &__empty
+        height: 350px
         padding: 28px
         padding-top: 54px
       &__image

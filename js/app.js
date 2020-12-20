@@ -103,9 +103,8 @@ if (document.querySelector('.trends-card') && document.querySelector('.trends__b
   const trendsCardsSort = (category, cards) => {
     trendsCards.forEach(card => {
       const isSorted = card.dataset.sortType === category
-      const isShowAll = category.toLowerCase() === 'all'
       const isEmptyCard = card.classList.contains('trends-card--empty')
-      if (!isSorted && !isShowAll && !isEmptyCard) {
+      if (!isSorted && !isEmptyCard) {
         card.classList.add('trends-card--sorted')
       } else {
         card.classList.remove('trends-card--sorted')
