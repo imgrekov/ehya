@@ -11,9 +11,24 @@ const menuClose = () => {
   nav.classList.remove('header__right--active')
   body.classList.remove('overflow--hidden')
 }
+const scrollToCurrentSection = to => {
+  const currentSection = document.querySelector(to)
+  const currentSectionTop = currentSection.offsetTop - 50
+
+  window.scrollTo({
+    top: currentSectionTop,
+    behavior: 'smooth',
+  })
+}
 
 // Навигация
 navLinks.forEach(link => link.addEventListener('click', menuClose))
+navLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault()
+    scrollToCurrentSection(link.dataset.to)
+  })
+})
 headerBurger.addEventListener('click', menuOpen)
 headerClose.addEventListener('click', menuClose)
 

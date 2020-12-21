@@ -82,6 +82,10 @@ picture
   cursor: pointer
   transition: 0.2s ease 0s
   outline: none
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+  max-width: 250px
   +hover
     background-color: lighten($black, 7%)
     border: 2px solid lighten($black, 7%)
@@ -147,6 +151,7 @@ picture
   opacity: 0
   transform: translateY(25px)
   transition: 0.2s ease-in-out
+  mix-blend-mode: difference
   &--active
     visibility: visible
     opacity: 1
@@ -159,7 +164,7 @@ picture
     +trs(fill)
   +hover
     svg
-      fill: $accent
+      fill: #ea9a27
 
 @media screen and ( max-width: 1200px )
   .container

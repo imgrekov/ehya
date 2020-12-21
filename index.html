@@ -10,7 +10,7 @@
   <body>
     <div class="page">
       <header class="header">
-        <div class="container">
+        <div class="container header__container">
           <div class="header__wrapper">
             <a class="header__logo logo no-hover" href="./index.html" aria-label="Ehya logo">
               <img src="./images/logo.svg" alt="Ehya logo" />
@@ -20,27 +20,27 @@
               <nav class="header__nav nav">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a href="#hero" class="nav__link">Главная</a>
+                    <a href="javascript:;" class="nav__link" data-to="#hero">Главная</a>
                     <!-- /.nav__link -->
                   </li>
                   <!-- /.nav__item -->
                   <li class="nav__item">
-                    <a href="#info" class="nav__link">Новинки</a>
+                    <a href="javascript:;" class="nav__link" data-to="#info">Новинки</a>
                     <!-- /.nav__link -->
                   </li>
                   <!-- /.nav__item -->
                   <li class="nav__item">
-                    <a href="#trends" class="nav__link">Тренды</a>
+                    <a href="javascript:;" class="nav__link" data-to="#trends">Тренды</a>
                     <!-- /.nav__link -->
                   </li>
                   <!-- /.nav__item -->
                   <li class="nav__item">
-                    <a href="#reviews" class="nav__link">Отзывы</a>
+                    <a href="javascript:;" class="nav__link" data-to="#reviews">Отзывы</a>
                     <!-- /.nav__link -->
                   </li>
                   <!-- /.nav__item -->
                   <li class="nav__item">
-                    <a href="#footer" class="nav__link">Контакты</a>
+                    <a href="javascript:;" class="nav__link" data-to="#footer">Контакты</a>
                     <!-- /.nav__link -->
                   </li>
                   <!-- /.nav__item -->
@@ -963,8 +963,8 @@
                         <!-- /.stories-slider__link -->
                         <p class="stories-slider__text">Mix & Match Style 01: повседневный и формальный стиль</p>
                         <!-- /.stories-slider__text -->
-                        <span href="#!" class="stories-slider__cta">Читать далее</span>
-                        <!-- /.stories-slider__link -->
+                        <span class="stories-slider__cta">Читать далее</span>
+                        <!-- /.stories-slider__cta -->
                       </div>
                     </div>
                     <!-- /.stories-slider__item -->
@@ -982,8 +982,8 @@
                         <!-- /.stories-slider__link -->
                         <p class="stories-slider__text">Лайфхак: Купите одежду Thrifft на воскресном рынке</p>
                         <!-- /.stories-slider__text -->
-                        <span href="#!" class="stories-slider__cta">Читать далее</span>
-                        <!-- /.stories-slider__link -->
+                        <span class="stories-slider__cta">Читать далее</span>
+                        <!-- /.stories-slider__cta -->
                       </div>
                     </div>
                     <!-- /.stories-slider__item -->
@@ -1003,8 +1003,8 @@
                           Где&nbsp;покупать одежду и&nbsp;не&nbsp;переживать за&nbsp;качество
                         </p>
                         <!-- /.stories-slider__text -->
-                        <span href="#!" class="stories-slider__cta">Читать далее</span>
-                        <!-- /.stories-slider__link -->
+                        <span class="stories-slider__cta">Читать далее</span>
+                        <!-- /.stories-slider__cta -->
                       </div>
                     </div>
                     <!-- /.stories-slider__item -->
@@ -1022,8 +1022,8 @@
                         <!-- /.stories-slider__link -->
                         <p class="stories-slider__text">На работу влияет не&nbsp;только техника и&nbsp;окружение</p>
                         <!-- /.stories-slider__text -->
-                        <span href="#!" class="stories-slider__cta">Читать далее</span>
-                        <!-- /.stories-slider__link -->
+                        <span class="stories-slider__cta">Читать далее</span>
+                        <!-- /.stories-slider__cta -->
                       </div>
                     </div>
                     <!-- /.stories-slider__item -->
@@ -1052,14 +1052,21 @@
               </div>
               <!-- /.subscribe__text -->
               <form action="send.php" method="POST" class="subscribe-form">
-                <svg class="subscribe-form__icon" width="16" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.688 3.969c-.72.562-1.626 1.25-4.813 3.562C10.25 8 9.094 9.031 8 9.031c-1.125 0-2.25-1.031-2.906-1.5C1.906 5.22 1 4.531.28 3.97c-.125-.094-.281 0-.281.156V10.5c0 .844.656 1.5 1.5 1.5h13a1.5 1.5 0 001.5-1.5V4.125c0-.156-.188-.25-.313-.156zM8 8c.719.031 1.75-.906 2.281-1.281 4.156-3 4.469-3.282 5.406-4.032A.711.711 0 0016 2.095V1.5c0-.813-.688-1.5-1.5-1.5h-13A1.5 1.5 0 000 1.5v.594c0 .25.094.469.281.594.938.75 1.25 1.03 5.407 4.03C6.218 7.095 7.25 8.032 8 8z"
-                    fill="#183B56"
-                  />
-                </svg>
-
-                <input class="subscribe-form__input" type="email" name="email" placeholder="Ваш Email" required />
+                <div class="subscribe-form__group">
+                  <svg
+                    class="subscribe-form__icon"
+                    width="16"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.688 3.969c-.72.562-1.626 1.25-4.813 3.562C10.25 8 9.094 9.031 8 9.031c-1.125 0-2.25-1.031-2.906-1.5C1.906 5.22 1 4.531.28 3.97c-.125-.094-.281 0-.281.156V10.5c0 .844.656 1.5 1.5 1.5h13a1.5 1.5 0 001.5-1.5V4.125c0-.156-.188-.25-.313-.156zM8 8c.719.031 1.75-.906 2.281-1.281 4.156-3 4.469-3.282 5.406-4.032A.711.711 0 0016 2.095V1.5c0-.813-.688-1.5-1.5-1.5h-13A1.5 1.5 0 000 1.5v.594c0 .25.094.469.281.594.938.75 1.25 1.03 5.407 4.03C6.218 7.095 7.25 8.032 8 8z"
+                      fill="#183B56"
+                    />
+                  </svg>
+                  <input class="subscribe-form__input" type="email" name="email" placeholder="Ваш Email" required />
+                </div>
                 <button class="subscribe-form__button button" type="submit">Подписаться</button>
               </form>
               <!-- /.subscribe-form -->
