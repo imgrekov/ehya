@@ -176,13 +176,6 @@ if (document.querySelector('.trends-card') && document.querySelector('.trends__b
       trendsCardsSort(button.dataset.sort, trendsCards)
     })
   })
-
-  // trendsCards.forEach(card => {
-  //   trendsButtons.forEach(button => {
-  //     button.dataset.sort
-  //   })
-  //   virginSort()
-  // })
 }
 
 // Валидация форм
