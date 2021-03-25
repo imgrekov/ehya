@@ -21,7 +21,9 @@
     background-color: transparent
     color: $secondary
     cursor: pointer
-    outline: none
+    &:focus
+      outline: 2px solid $accent
+      outline-offset: 3px
     &:last-child
       margin-right: 0
     &::after

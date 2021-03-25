@@ -18,7 +18,6 @@ a
   position: relative
   color: $accent
   text-decoration: none
-  outline: none
   &::after
     content: ''
     position: absolute
@@ -32,6 +31,9 @@ a
     color: darken($accent, 10%)
     &::after
       width: 100%
+  &:focus
+    outline: 2px solid $accent
+    outline-offset: 3px
   &.no-hover
     &::after
       display: none
@@ -81,7 +83,6 @@ picture
   color: #ffffff
   cursor: pointer
   transition: 0.2s ease 0s
-  outline: none
   overflow: hidden
   white-space: nowrap
   text-overflow: ellipsis
@@ -89,6 +90,9 @@ picture
   +hover
     background-color: lighten($black, 7%)
     border: 2px solid lighten($black, 7%)
+  &:focus
+    outline: 2px solid $accent
+    outline-offset: 3px
   &--o
     background-color: transparent
     color: $accent
@@ -146,12 +150,14 @@ picture
   border-radius: 50%
   background-color: transparent
   cursor: pointer
-  outline: none
   visibility: hidden
   opacity: 0
   transform: translateY(25px)
   transition: 0.2s ease-in-out
   mix-blend-mode: difference
+  &:focus
+    outline: 2px solid $accent
+    outline-offset: 3px
   &--active
     visibility: visible
     opacity: 1

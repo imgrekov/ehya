@@ -39,8 +39,10 @@
     right: 10px
     background-color: transparent
     border: none
-    outline: none
     cursor: pointer
+    &:focus
+      outline: 2px solid $accent
+      outline-offset: 3px
   &__title
     margin-bottom: 30px
     max-width: 430px
@@ -99,7 +101,9 @@
       background-color: #ffffff
       border: 1px solid $secondary-light
       border-radius: 8px
-      outline: none
+      &:focus
+        outline: 2px solid $accent
+        outline-offset: 3px
     &__button
       min-width: 49%
 

@@ -20,7 +20,9 @@
       overflow-y: auto
       font-size: 20px
       line-height: 42px
-      outline: none
+      &:focus
+        outline: 2px solid $accent
+        outline-offset: 3px
     &__author
       font-size: 20px
       line-height: 24px
@@ -34,7 +36,9 @@
         width: 5px
         height: 5px
         background-color: $secondary-light
-        outline: none
+        &:focus
+          outline: 2px solid $accent
+          outline-offset: 3px
         &-active
           background-color: $black
 
